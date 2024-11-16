@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Tags;
+namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
 use App\Models\Tag;

@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Tags;
+namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class ShowController extends Controller
+class DeleteController extends Controller
 {
     public function __invoke(Tag $tag)
     {
 
-        return view('tags.show', compact('tag'));
+        $tag->delete();
+
+        return redirect()->route('tag.index');
     }
 }
