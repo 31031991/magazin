@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Категорії</h1>
+                    <h1 class="m-0">Редагувати категорію</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -24,7 +24,18 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-              </div>
+                <form action="{{ route('category.update', $category->id) }}" method ="post">
+                    @csrf
+                    @method('patch')
+
+                    <div class ="form-group">
+                        <input type = "text" name ="title" value="{{ $category->title }}" class = "form-control" placeholder = "Найменування">
+                    </div>
+                    <div class ="form-group">
+                        <input type = "submit" class = "btn btn-primary" value = "Редагувати">
+                    </div>
+                </form>
+            </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
     </section>
