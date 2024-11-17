@@ -32,6 +32,7 @@
                     <div class ="form-group">
                         <input type = "text" name ="title" class = "form-control" placeholder = "Найменування">
                     </div>
+
                     <div class ="form-group">
                         <input type = "submit" class = "btn btn-primary" value = "Добавити">
                     </div>
