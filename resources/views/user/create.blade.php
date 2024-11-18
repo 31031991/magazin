@@ -42,7 +42,7 @@
                     </div>
 
                     <div class ="form-group">
-                        <input type = "text" value="{{ old( 'password_confirmation' )}}" name ="password_confirmation" class = "form-control" placeholder = "Найменування">
+                        <input type = "text" value="{{ old( 'password_confirmation' )}}" name ="password_confirmation" class = "form-control" placeholder = "Підтвердити пароль">
                     </div>
 
                     <div class ="form-group">
