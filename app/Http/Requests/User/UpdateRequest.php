@@ -21,10 +21,10 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
+            'address' => 'nullable|string',
             'surname' => 'nullable|string',
             'patronymic' => 'nullable|string',
             'age' => 'nullable|integer',
-            'address' => 'nullable|string',
             'gender' => 'nullable|integer',
 
         ];

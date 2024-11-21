@@ -26,6 +26,7 @@
             <div class="row">
 
                 <form action="{{ route('product.store') }}" method ="post" enctype="multipart/form-data">
+
                     @csrf
 
 
@@ -67,7 +68,7 @@
                         <select name="category_id" class="form-control select2"  style="width: 100%;">
                             <option selected="selected" disabled>Виберіть категорію </option>
                             @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->title}} </option>
+                            <option value="{{ $category->id }}">{{ $category->title }} </option>
                             @endforeach
                         </select>
                     </div>
@@ -77,7 +78,7 @@
                     <div class="form-group">
                         <select name="tags[]" class="tags" multiple="multiple" data-placeholder="Виберіть Тег" style="width: 100%  ">
                             @foreach ($tags as $tag)
-                            <option value = "{{$tag->id}}">{{$tag->title}} </option>
+                            <option value = " {{$tag->id}}">{{$tag->title}}  </option>
                             @endforeach
                         </select>
                     </div>

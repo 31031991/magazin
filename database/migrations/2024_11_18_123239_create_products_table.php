@@ -15,14 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->text('content')->nullable();;
-            $table->string('preview_image')->nullable();;
-            $table->integer('price')->nullable();;
-            $table->integer('count')->nullable();;
-            $table->boolean('is_published')->default(true)
-            ;
+            $table->text('content')->nullable();
+            $table->string('preview_image')->nullable();
+            $table->integer('price')->nullable();
+            $table->integer('count')->nullable();
+            $table->boolean('is_published')->default(true);
             $table->foreignId('category_id')->nullable()->index()->constrained('categories','id');
-
             $table->timestamps();
         });
     }

@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class UpdateRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Определяет, авторизован ли пользователь.
      */
     public function authorize(): bool
     {
@@ -15,14 +15,17 @@ class UpdateRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * Правила валидации.
      */
     public function rules(): array
     {
         return [
-            'title' => 'required|string'
+            'title' => 'required|string',
+            'preview_image' => 'nullable|image', // Для обновления изображения
+            'tags' => 'nullable|array',
+            'tags.*' => 'integer|exists:tags,id', //звязок products tags з таблицею tags по tags_id з id
+            'colors' => 'nullable|array',
+            'colors.*' => 'integer|exists:colors,id',
         ];
     }
 }

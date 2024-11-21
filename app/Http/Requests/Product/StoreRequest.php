@@ -29,9 +29,9 @@ class StoreRequest extends FormRequest
             'price' => 'required',
             'count' => 'required',
             'is_published' => 'nullable',
-            'category_id'=> 'nullable',
-            'tags' => 'nullable|array',
-            'colors' => 'nullable|array'
+            'category_id'=> 'nullable',      // таблиця products зєднана з таблицею categories
+            'tags' => 'nullable|array',      // таблиця product tags з таблицею Tags
+            'colors' => 'nullable|array'    // таблиця color products з таблицею colors
         ];
     }
 }
