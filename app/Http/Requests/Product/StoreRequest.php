@@ -28,6 +28,7 @@ class StoreRequest extends FormRequest
             'preview_image' => 'required',
             'price' => 'required',
             'count' => 'required',
+            'old_price' => 'required',
             'is_published' => 'nullable',
             'category_id'=> 'nullable',      // таблиця products зєднана з таблицею categories
             'tags' => 'nullable|array',      // таблиця product tags з таблицею Tags

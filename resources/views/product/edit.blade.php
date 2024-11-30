@@ -32,6 +32,7 @@
                         <input type = "text" name ="title" value="{{ $product->title }}" class = "form-control" placeholder = "Найменування">
                     </div>
 
+
                     <div class ="form-group">
                         <input type = "submit" class = "btn btn-primary" value = "Редагувати">
                     </div>

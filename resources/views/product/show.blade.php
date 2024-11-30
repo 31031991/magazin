@@ -55,6 +55,11 @@
                                     <td> {{ $product->title }} </td>
                                 </tr>
 
+                                <tr>
+                                    <td> Cтара Ціна </td>
+                                    <td> {{ $product->old_price }} </td>
+                                </tr>
+
 
 
                                 </tbody>

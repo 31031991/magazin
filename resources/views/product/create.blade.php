@@ -46,9 +46,12 @@
                         <input type = "text" name ="price" class = "form-control" placeholder = "Ціна">
                     </div>
 
-
                     <div class ="form-group">
                         <input type = "text" name ="count" class = "form-control" placeholder = "Кількість на складі">
+                    </div>
+
+                    <div class ="form-group">
+                        <input type = "text" name ="old_price" class = "form-control" placeholder = "Стара Ціна">
                     </div>
 
                     <div class="form-group">

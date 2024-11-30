@@ -36,6 +36,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Найменування</th>
+                                    <th>Стара ціна</th>
 
                                 </tr>
                                 </thead>
@@ -44,8 +45,10 @@
 
                                     <tr>
                                         <td>{{ $product->id }}</td>
-                                        <td><a href ="{{ route( 'product.show', $product->id) }}">  {{ $product->title }} </a></td>
+                                        <td><a href ="{{ route( 'product.show', $product->id) }} "> {{ $product->title  }}  </a></td>
+
                                     </tr>
+
 
                                 @endforeach
                                 </tbody>
