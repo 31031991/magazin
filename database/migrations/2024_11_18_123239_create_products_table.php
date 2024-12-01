@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('old_price')->nullable();
             $table->boolean('is_published')->default(true);
             $table->foreignId('category_id')->nullable()->index()->constrained('categories','id');
+            $table->foreignId('group_id')->nullable()->index()->constrained('groups','id');
             $table->timestamps();
         });
     }

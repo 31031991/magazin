@@ -165,6 +165,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a href="{{ route( 'group.index') }}" class="nav-link">
+                            <i class="nav-icon far fa-image"></i>
+                            <p>Групи</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a href="{{ route( 'tag.index') }}" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>Теги</p>

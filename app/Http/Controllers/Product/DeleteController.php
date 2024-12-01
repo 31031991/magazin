@@ -11,9 +11,13 @@ class DeleteController extends Controller
 
     public function __invoke(Product $product)
     {
+        // Видалення всіх зв'язків із таблиці `color_products`
+        $product->colors()->detach();
 
+        // Видалення продукту
         $product->delete();
-        return redirect()->route('product.index');
+
+        return redirect()->route('product.index')->with('success', 'Продукт успішно видалено.');
     }
 
 }

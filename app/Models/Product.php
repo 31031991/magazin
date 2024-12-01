@@ -11,7 +11,7 @@ class Product extends Model
 
     // Разрешаем массовое заполнение для поля 'title'
     protected $fillable =
-        ['title', 'description', 'content', 'price', 'old price', 'count', 'category_id', 'preview_image'] ;
+        ['title', 'description', 'content', 'price', 'old price', 'count', 'category_id', 'group_id', 'preview_image'] ;
                                                                                                                 //після цього ті дані які є тут внеслися в базу даних таблицю Products
 
     public function category() //звязок між  моделями Category і Products
@@ -23,6 +23,11 @@ class Product extends Model
 
       return url('storage/'. $this->preview_image);
 
+    }
+
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class ,'color_products','product_id','color_id');
     }
 
 
